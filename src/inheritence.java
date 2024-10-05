@@ -80,6 +80,25 @@ class HC extends HA {
     }
 }
 
+class Aa {
+    public void show() {
+        System.out.println("Hi, I am in Aa show...");
+    }
+
+    public void config() {
+        System.out.println("Hi, I am in Aa config...");
+    }
+}
+
+class Bb extends Aa {
+    // overriding methods
+    public void show() {
+        System.out.println("Hi, I am in Bb show...");
+    }
+}
+
+
+
 // Testing various inheritance types
 public class inheritence {
     public static void main(String[] args) {
@@ -132,22 +151,11 @@ public class inheritence {
         Bb b = new Bb();
         b.show();   // Calls Bb's show method
         b.config(); // Calls Aa's config method (inherited by Bb)
+
+        System.out.println();
+
+
+
     }
 }
 
-class Aa {
-    public void show() {
-        System.out.println("Hi, I am in Aa show...");
-    }
-
-    public void config() {
-        System.out.println("Hi, I am in Aa config...");
-    }
-}
-
-class Bb extends Aa {
-    // overriding methods
-    public void show() {
-        System.out.println("Hi, I am in Bb show...");
-    }
-}
