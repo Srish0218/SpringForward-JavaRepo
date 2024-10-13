@@ -1,5 +1,3 @@
-Here’s the list with the `IPA<number>` items arranged numerically first, followed by the remaining items arranged alphabetically:
-
 1. [x] IPA1 ([Problem -> Course](Problem37_Course.java))
 2. [ ] IPA2
 3. [ ] IPA3
@@ -14,10 +12,10 @@ Here’s the list with the `IPA<number>` items arranged numerically first, follo
 12. [x] IPA12 ([Problem -> Medicine](Problem9_Medicine.java))
 13. [x] IPA13 ([Problem -> AutonomousCar](Problem23_AutonomousCar.java))
 14. [x] IPA14 ([Problem -> Movie](Problem38_Movie.java))
-15. [ ] IPA15
-16. [ ] IPA16
-17. [ ] IPA17
-18. [ ] IPA18
+15. [x] IPA15 ([Problem -> Phone](Problem39_Phone.java))
+16. [x] IPA16 ([Problem -> NavelVessel](Problem34_NavalVessel.java))
+17. [x] IPA17 ([Problem -> Student Grade](Problem40_StudentGrade.java))
+18. [x] IPA18 ([Problem -> Antenna](Problem41_Antenna.java))
 19. [ ] IPA19
 20. [ ] IPA20
 21. [ ] IPA21
