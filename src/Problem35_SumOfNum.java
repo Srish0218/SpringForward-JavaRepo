@@ -14,23 +14,14 @@
 import java.util.*;
 
 public class Problem35_SumOfNum {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String string = sc.nextLine();
-        String num = "";
-        for(String ch : string.split("")) {
-            if(Character.isDigit(ch.charAt(0))) {
-                System.out.print(ch);
-                num += ch;
-            }
-            else {
-                num += ch;
-                System.out.print(" ");
-            }
+    public static void main(String[] args)
+    {
+        int sum=0;
+        int num=0;
+        String str = "123Arijit1998Arijit10";
+        for(int i=0;i<str.length();i++){
+
         }
-        String[] nums = num.split(" ");
-        for(String ch : nums) {
-            System.out.println(ch);
-        }
+
     }
 }

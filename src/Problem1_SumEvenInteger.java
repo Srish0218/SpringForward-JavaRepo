@@ -16,35 +16,27 @@ import java.util.*;
 public class Problem1_SumEvenInteger {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        int[] arr = new int[5];
+        System.out.println("Enter Size of array: ");
+        int n = sc.nextInt();
+        sc.nextLine();
+        int[] arr = new int[n];
         System.out.println("Enter the number of elements: ");
         for(int i = 0; i < arr.length; i++){
+            System.out.println("Enter element "+(i+1)+": ");
             arr[i] = sc.nextInt();
         }
-
+        int sum = 0;
         System.out.println("Elements in array: ");
 
         for(Integer i : arr){
-            System.out.print(i + " ");
+            if(i%2 == 0){
+                sum += i;
+            }
+            System.out.print(i + ", ");
         }
         System.out.println();
-        System.out.println("Enter Limit 1: ");
-        int limit1 = sc.nextInt();
-        System.out.println("Enter Limit 2: ");
-        int limit2 = sc.nextInt();
-        System.out.println("Limit 1 : " + limit1 + "\nLimit 2 : " + limit2);
+        System.out.println("Sum of even numbers: "+sum);
 
-        int sum = 0;
-        int count = 0;
 
-        for(int i = 0; i < arr.length; i++){
-            if (arr[i] > limit1 && arr[i] < limit2){
-                sum += arr[i];
-                count ++;
-
-            }
-        }
-        System.out.println("Sum : " + sum);
-        System.out.println("Average : " + sum/count);
     }
 }
