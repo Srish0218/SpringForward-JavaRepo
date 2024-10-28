@@ -176,7 +176,7 @@ public class Problem28_RapidResponseTeam {
             return null;
         }
         ticketProject.sort((s1 , s2) -> Integer.compare(s1.getPriority() , s2.getPriority()));
-        return ticketProject.getFirst();
+        return ticketProject.get(0);
 
     }
 }

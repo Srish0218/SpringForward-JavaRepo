@@ -123,6 +123,6 @@ public class Problem65_Fruits {
         }
 
         fruitsList.sort((s1 , s2) -> Integer.compare(s2.getPrice(), s1.getPrice()));
-        return fruitsList.getFirst();
+        return fruitsList.get(0);
     }
 }

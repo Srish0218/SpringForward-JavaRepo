@@ -266,6 +266,6 @@ public class Problem26_College {
                 collegeByAddress.add(college);
             }
         }
-        return collegeByAddress.getFirst();
+        return collegeByAddress.get(0);
     }
 }

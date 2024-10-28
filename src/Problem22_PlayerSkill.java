@@ -154,7 +154,7 @@ public class Problem22_PlayerSkill {
         if(result.isEmpty()){
             return null;
         }else
-            return result.getFirst();
+            return result.get(0);
 
     }
 }

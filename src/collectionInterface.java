@@ -74,9 +74,9 @@ public class collectionInterface {
         // Removing an element by index
         nums1.remove(2);
         System.out.println("List after removing element at index 0: " + nums1);
-        nums1.removeFirst();
+        nums1.remove(0);
         System.out.println("List after removing first element: " + nums1);
-        nums1.removeLast();
+        nums1.remove(0);
         System.out.println("List after removing last element: " + nums1);
 
         // Sorting the List in descending order
