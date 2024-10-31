@@ -15,11 +15,20 @@ public class Problem43_Sum_Prime_Digits {
         String num = sc.nextLine();
         int sum = 0;
         for (int i = 0; i < num.length(); i++) {
+//            char ch = num.charAt(i);
+//            String str = String.valueOf(ch);
+//            int n = Integer.parseInt(str);
             int digit = Integer.parseInt(String.valueOf(num.charAt(i)));
             if(isPrime(digit)) {
                 sum += digit;
             }
         }
+//        for (char ch : num.toCharArray()) {  // Iterate through each character in the string
+//            int digit = Character.getNumericValue(ch);
+//            if (isPrime(digit)) {
+//                sum += digit;
+//            }
+//        }
         System.out.println(sum);
 
 

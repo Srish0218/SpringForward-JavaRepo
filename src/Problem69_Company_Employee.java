@@ -128,7 +128,7 @@ class Company{
 
 }
 
-public class Problem21_Company_Employee {
+public class Problem69_Company_Employee {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter company name: ");
