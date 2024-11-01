@@ -45,6 +45,7 @@ Output
 101
 104
  */
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class Associate{
@@ -58,6 +59,17 @@ class Associate{
         this.name = name;
         this.technology = technology;
         this.experienceInYears = experienceInYears;
+    }
+
+    public String getTechnology() {
+        return technology;
+    }
+
+    public int getExperienceInYears() {
+        return experienceInYears;
+    }
+    public int getId() {
+        return id;
     }
 }
 
@@ -81,8 +93,25 @@ public class Problem66_Associate {
             associates[i] = new Associate(id, name, technology, experienceInYears);
         }
         System.out.println("Enter associate technology parameter: ");
-        String technology = sc.nextLine();
+        String technologyParameter = sc.nextLine();
 
+        ArrayList<Associate> associatesIDs = associatesForGivenTechnology(associates , technologyParameter);
+        for (Associate associate : associatesIDs) {
+            System.out.println(associate.getId());
+        }
 
+    }
+    public static ArrayList<Associate> associatesForGivenTechnology(Associate[] associates , String technologyParameter) {
+        ArrayList<Associate> associatesArray = new ArrayList<>();
+        for(Associate associate : associates) {
+            if(associate.getTechnology().equals(technologyParameter) && isMultipleOf5(associate.getExperienceInYears())) {
+                associatesArray.add(associate);
+            }
+        }
+        return associatesArray;
+
+    }
+    public static boolean isMultipleOf5(int experienceInYears) {
+        return (experienceInYears % 5 == 0);
     }
 }
