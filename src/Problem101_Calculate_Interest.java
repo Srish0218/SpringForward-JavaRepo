@@ -9,56 +9,55 @@ interestRate - double
 Take another integer as number of year.
 After that calculate total interest using formula:
 
-Percentage = interestRate * 100 / time
-Total Interest = Percentage + interestRate
- */
 
+Total Interest = Total Interest = Balance×Interest Rate×Years
+ */
 import java.util.*;
 
-class CalculateInterest{
+class CalculateInterest {
     private int id;
     private double balance;
     private double interestRate;
-    public CalculateInterest(int id, double balance, double interestRate){
+
+    public CalculateInterest(int id, double balance, double interestRate) {
         this.id = id;
         this.balance = balance;
         this.interestRate = interestRate;
     }
-    public double getInterestRate(){
+
+    public double getInterestRate() {
         return interestRate;
     }
-    public double getBalance(){
+
+    public double getBalance() {
         return balance;
     }
-    public int getId(){
+
+    public int getId() {
         return id;
     }
-
 }
 
 public class Problem101_Calculate_Interest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Account ID: ");
+        System.out.print("Enter Account ID: ");
         int id = sc.nextInt();
-        sc.nextLine();
         System.out.print("Enter Interest Rate: ");
         double rate = sc.nextDouble();
-        sc.nextLine();
         System.out.print("Enter Balance: ");
         double balance = sc.nextDouble();
-        sc.nextLine();
         CalculateInterest account = new CalculateInterest(id, balance, rate);
 
-        System.out.println("Enter number of years: ");
+        System.out.print("Enter number of years: ");
         int years = sc.nextInt();
-        sc.nextLine();
 
-        double interest = calculateInterest(account , years);
-        System.out.println("Interest: ");
-        System.out.format("%.3f",interest);
+        double interest = calculateInterest(account, years);
+        System.out.print("Total Interest: ");
+        System.out.format("%.3f", interest);
     }
-    public static double calculateInterest(CalculateInterest account , int years){
-        return ((account.getInterestRate() / 100) * years)  + account.getInterestRate();
+
+    public static double calculateInterest(CalculateInterest account, int years) {
+        return account.getBalance() * (account.getInterestRate() / 100) * years;
     }
 }
