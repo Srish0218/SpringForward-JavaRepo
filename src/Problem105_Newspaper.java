@@ -8,8 +8,10 @@ price-int
 
 Write parametrised constructor as required.
 Create class Solution with main method.
+
 Implement 2 static methods findTotalPriceByPublicationYear and
 searchNewspaperByName in solution class.
+
 findTotalPriceByPublicationYear method:
    This method will take array of the Newspaper objects and int parameter
 type.This method will return the total price of newspapers from array of
@@ -95,9 +97,87 @@ No Newspaper found with the given name
 
 import java.util.*;
 
+class Newspaper{
+    private int regNo;
+    private String name;
+    private int publicationYear;
+    private int price;
+
+    public Newspaper(int regNo, String name, int publicationYear, int price){
+        this.regNo = regNo;
+        this.name = name;
+        this.publicationYear = publicationYear;
+        this.price = price;
+    }
+    public String getName() {
+        return name;
+    }
+
+    public int getPublicationYear() {
+        return publicationYear;
+    }
+    public int getPrice() {
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return "regNo.-" + regNo + "\nname-" + name + "\npublicationYear-" + publicationYear + "\nprice-" + price;
+    }
+}
+
 public class Problem105_Newspaper {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number of newspapers: ");
+        Newspaper[] newspapers = new Newspaper[sc.nextInt()];
+        for (int i = 0; i < newspapers.length; i++) {
+            System.out.println("Enter newspaper registration number: ");
+            int regNo = sc.nextInt();
+            sc.nextLine();
+            System.out.println("Enter newspaper name: ");
+            String name = sc.nextLine();
+            System.out.println("Enter newspaper publication year: ");
+            int publicationYear = sc.nextInt();
+            sc.nextLine();
+            System.out.println("Enter newspaper price: ");
+            int price = sc.nextInt();
+            sc.nextLine();
 
+            newspapers[i] = new Newspaper(regNo , name , publicationYear , price);
+
+        }
+        System.out.println("Enter publication year Parameter: ");
+        int publicationYearParameter = sc.nextInt();
+        sc.nextLine();
+
+        System.out.println("Enter Name Parameter: ");
+        String nameParameter = sc.nextLine();
+
+        int totalPriceByYear = findTotalPriceByPublicationYear(newspapers , publicationYearParameter);
+        System.out.println(totalPriceByYear > 0 ? totalPriceByYear : "No Newspaper found with the mentioned attribute");
+
+        Newspaper newspaperDetails = searchNewspaperByName(newspapers , nameParameter);
+        System.out.println(newspaperDetails != null ? newspaperDetails : "No Newspaper found with the given name");
+
+
+
+    }
+    public static int findTotalPriceByPublicationYear(Newspaper[] newspapers, int publicationYearParameter) {
+        int totalPrice = 0;
+        for (Newspaper newspaper : newspapers) {
+            if(newspaper.getPublicationYear() == publicationYearParameter) {
+                totalPrice += newspaper.getPrice();
+            }
+        }
+        return totalPrice;
+    }
+    public static Newspaper searchNewspaperByName(Newspaper[] newspapers, String name) {
+        for (Newspaper newspaper : newspapers) {
+            if(newspaper.getName().equalsIgnoreCase(name)) {
+                return newspaper;
+            }
+        }
+        return null;
     }
 }
