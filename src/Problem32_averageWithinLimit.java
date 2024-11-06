@@ -28,6 +28,7 @@ public class Problem32_averageWithinLimit {
         int upperLimit = sc.nextInt();
         int sum = 0;
 
+
         Arrays[] arr = new Arrays[n];
 
         while(lowerLimit <= upperLimit){

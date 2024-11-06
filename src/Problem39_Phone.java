@@ -69,33 +69,6 @@ The given Brand is not available
 
 import java.util.*;
 
-class Phone{
-    private int phoneId;
-    private String os;
-    private String brand;
-    private int price;
-
-    public Phone(int phoneId, String os, String brand, int price) {
-        this.phoneId = phoneId;
-        this.os = os;
-        this.brand = brand;
-        this.price = price;
-    }
-    public String getBrand() {
-        return brand;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-    public String getOs() {
-        return os;
-    }
-    public int getPhoneId() {
-        return phoneId;
-    }
-}
-
 
 public class Problem39_Phone {
     public static void main(String[] args) {
@@ -150,5 +123,33 @@ public class Problem39_Phone {
         }
 
         return phoneOs[0] == null ? null : phoneOs[0];
+    }
+}
+
+
+class Phone{
+    private int phoneId;
+    private String os;
+    private String brand;
+    private int price;
+
+    public Phone(int phoneId, String os, String brand, int price) {
+        this.phoneId = phoneId;
+        this.os = os;
+        this.brand = brand;
+        this.price = price;
+    }
+    public String getBrand() {
+        return brand;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+    public String getOs() {
+        return os;
+    }
+    public int getPhoneId() {
+        return phoneId;
     }
 }
